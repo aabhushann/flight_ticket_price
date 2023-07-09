@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLIGHT TICKET PRICE PREDICTION</title>
+</head>
+
+<body>
+    <img src="{{url_for('static',filename = 'main.png')}}" alt="img" width="600" height="300">
+    
+    
+    <header class="intro-header" style="background-image: url('static/background1.jpg')"></header>
+
+
+    <h1> FLIGHT TICKET PRICE PREDICTION </h1>
+    <form method="GET" action="/predict_charges">
+
+       
+        <br>
+
+        <label>Airline:</label>
+        <select name = "airline">
+            <option value = "Vistara">Vistara</option>
+            <option value = "Air_India">Air_India</option>
+            <option value = "GO_FIRST">Vistara</option>
+            <option value = "AirAsia">AirAsia</option>
+            <option value = "SpiceJet">SpiceJet</option>
+        </select>
+
+        <br>
+
+        <br>
+
+        <label>Source City:</label>
+        <select name = "source_city">
+            <option value = "Delhi">Delhi</option>
+            <option value = "Mumbai">Mumbai</option>
+            <option value = "Bangalore">Bangalore</option>
+            <option value = "Kolkata">Kolkata</option>
+            <option value = "Hyderabad">Hyderabad</option>
+            <option value = "Chennai">Chennai</option>
+        </select>
+
+        <br>
+
+        <br>
+
+        <label>Departure Time:</label>
+        <select name = "departure_time">
+            <option value = "Morning">Morning</option>
+            <option value = "Early_Morning">Early Morning</option>
+            <option value = "Evening">Evening</option>
+            <option value = "Night">Night</option>
+            <option value = "Afternoon">Afternoon</option>
+            <option value = "Late_Night">Late_Night</option>
+        </select>
+
+        <br>
+
+        <br>
+
+        <label>Stops:</label>
+        <select name = "stops">
+            <option value = "one">1</option>
+            <option value = "zero">0</option>
+            <option value = "two_or_more">2 or More</option>
+        </select>
+
+        <br>
+
+        <br>
+
+        <label>Arrival Time:</label>
+        <select name = "arrival_time">
+            <option value = "Night">Night</option>
+            <option value = "Evening">Evening</option>
+            <option value = "Morning">Morning</option>
+            <option value = "Afternoon">Afternoon</option>
+            <option value = "Early_Morning">Early Morning</option>
+            <option value = "Late_Night">Late_Night</option>
+        </select>
+
+        <br>
+         
+        <br>
+
+        <label>Destination City:</label>
+        <select name = "destination_city">
+            <option value = "Mumbai">Mumbai</option>
+            <option value = "Delhi">Delhi</option>
+            <option value = "Bangalore">Bangalore</option>
+            <option value = "Kolkata">Kolkata</option>
+            <option value = "Hyderabad">Hyderabad</option>
+            <option value = "Chennai">Chennai</option>
+        </select>
+
+        <br>
+        
+        <br>
+
+        <label>Class_:</label>
+        <select name = "class_">
+            <option value = "Economy">Economy</option>
+            <option value = "Business">Bussiness</option>
+        </select>
+
+        <br>
+         
+        <br>
+
+        <label>Duration:</label>
+        <input type = "text" name = "duration">
+        </select>
+
+        <br>
+        <br>
+
+        <label>Days Left:</label>
+        <input type = "text" name = "days_left">
+        </select>
+
+        <br>
+        
+
+        
+        <br>
+
+
+        <input type = "submit" value="SUBMIT">
+
+        <br>
+
+        <h4><strong>Your Flight Ticket Price is : <b>  Rs . {{ prediction }} /-  </b> Only </strong></h4>
+
+
+    </form>
+
+
+</body>
+</html>
+
