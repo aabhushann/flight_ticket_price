@@ -8,19 +8,45 @@
 </head>
 
 <body>
-    <img src="{{url_for('static',filename = 'main.png')}}" alt="img" width="600" height="300">
-    
-    
-    <header class="intro-header" style="background-image: url('static/background1.jpg')"></header>
+    <style>
+        body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                color: rgb(251, 247, 247);
+                text-shadow: rgb(0, 0, 0);
+                font-size:20px;
+                background-image: url(https://c0.wallpaperflare.com/preview/784/1016/848/aircraft-airplane-aviation-black-and-white.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
 
+            h1 {
+                text-align: center;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 80px;
+                color: #ffffff;
+                text-align: center;
+            }
+        form  {
+                position: absolute;
+                left: 600px;
+                box-shadow: #ffffff;
+            }
 
+           c :hover{
+            
+            cursor: pointer;
+            background-color: #ff0707;
+            color: #000;
+            }
+    </style>
+   
     <h1> FLIGHT TICKET PRICE PREDICTION </h1>
+   
     <form method="GET" action="/predict_charges">
 
-       
         <br>
 
-        <label>Airline:</label>
+        <label>AIRLINE        :</label>
         <select name = "airline">
             <option value = "Vistara">Vistara</option>
             <option value = "Air_India">Air_India</option>
@@ -33,7 +59,7 @@
 
         <br>
 
-        <label>Source City:</label>
+        <label>SOURCE CITY      :</label>
         <select name = "source_city">
             <option value = "Delhi">Delhi</option>
             <option value = "Mumbai">Mumbai</option>
@@ -47,7 +73,7 @@
 
         <br>
 
-        <label>Departure Time:</label>
+        <label>DEPARTURE TIME :</label>
         <select name = "departure_time">
             <option value = "Morning">Morning</option>
             <option value = "Early_Morning">Early Morning</option>
@@ -61,7 +87,7 @@
 
         <br>
 
-        <label>Stops:</label>
+        <label>STOPS          :</label>
         <select name = "stops">
             <option value = "one">1</option>
             <option value = "zero">0</option>
@@ -72,7 +98,7 @@
 
         <br>
 
-        <label>Arrival Time:</label>
+        <label>ARRIVAL TIME    :</label>
         <select name = "arrival_time">
             <option value = "Night">Night</option>
             <option value = "Evening">Evening</option>
@@ -86,7 +112,7 @@
          
         <br>
 
-        <label>Destination City:</label>
+        <label>DESTINATION CITY :</label>
         <select name = "destination_city">
             <option value = "Mumbai">Mumbai</option>
             <option value = "Delhi">Delhi</option>
@@ -100,7 +126,7 @@
         
         <br>
 
-        <label>Class_:</label>
+        <label>CLASS          :</label>
         <select name = "class_">
             <option value = "Economy">Economy</option>
             <option value = "Business">Bussiness</option>
@@ -110,14 +136,14 @@
          
         <br>
 
-        <label>Duration:</label>
+        <label>DURATION       :</label>
         <input type = "text" name = "duration">
         </select>
 
         <br>
         <br>
 
-        <label>Days Left:</label>
+        <label>DAYS LEFT      :</label>
         <input type = "text" name = "days_left">
         </select>
 
@@ -137,7 +163,10 @@
 
     </form>
 
-
+    <img src="{{url_for('static',filename = 'main.png')}}" alt="img" width="550" height="330">
+    
+    
+    <header class="intro-header" style="background-image: url('static/background1.jpg')"></header>
 </body>
 </html>
 
